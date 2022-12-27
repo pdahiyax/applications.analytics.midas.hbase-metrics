@@ -145,7 +145,7 @@ object MetricDetails {
     }
     finally
     {
-      scanner.close // always close the ResultScanner!
+      scanner.close
     }
 
     HbaseTable.close()
@@ -154,24 +154,5 @@ object MetricDetails {
   }
 }
 
-
-    // Teradata code starts here
-
-
-  /*  /**
-     * Initializing the Spark session and Hadoop configuration
-     */
-    val conf = new Configuration()*/
-
-
-/*    Class.forName("com.teradata.jdbc.TeraDriver")
-    val Query = "(select * from midas_ent.mds_lot_oper_testing_session) jobrun"
-
-    val df =  spark.sqlContext.read.format("jdbc").options(Map("url" ->
-      "jdbc:teradata://tdedw1.intel.com/database=MIDAS_ENT, TMODE=TERA",
-      "user" -> "appl_mds_hbase_etl", "password" -> "dont#change1",
-      "dbtable" -> Query, "driver" -> "com.teradata.jdbc.TeraDriver")).load()
-
-    println(df.show(10))*/
 
 
